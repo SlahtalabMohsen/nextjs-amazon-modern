@@ -129,7 +129,7 @@ const ProductCard = ({
         {getTranslatedName(product.name)}
       </Link>
       <div className="flex items-center gap-1">
-        <Rating value={product.avgRating} />
+        <Rating rating={product.avgRating} />
         <span className="text-xs text-muted-foreground">
           ({formatNumber(product.numReviews)})
         </span>
@@ -140,7 +140,6 @@ const ProductCard = ({
           price={product.price}
           listPrice={product.listPrice}
           forListing
-          product={product}
         />
       </div>
     </div>

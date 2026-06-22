@@ -83,12 +83,12 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       }
       return token
     },
-    session: async ({ session, user, trigger, token }) => {
+    session: async ({ session, token, trigger, user }) => {
       session.user.id = token.sub as string
       session.user.role = token.role as string
       session.user.name = token.name
       if (trigger === 'update') {
-        session.user.name = user.name
+        session.user.name = user?.name ?? token.name
       }
       return session
     },

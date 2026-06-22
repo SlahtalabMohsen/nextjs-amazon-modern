@@ -27,7 +27,7 @@ export function ensureRialCurrency() {
       availableCurrencies: newCurrencies
     })
     
-    console.log('Added Rial currency to available currencies')
+
   }
 }
 

@@ -3,7 +3,6 @@ import withNextIntl from "next-intl/plugin";
 
 const nextConfig: NextConfig = withNextIntl()({
   /* config options here */
-  output: "export",
   images: {
     remotePatterns: [
       {
